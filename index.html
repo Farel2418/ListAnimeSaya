@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anime List Saya</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="darkModeToggle" />
+        🌙 Tema Gelap
+      </label>
+    </div>
+
+    <h1>Anime List</h1>
+
+    <form id="animeForm">
+      <input type="text" id="animeTitle" placeholder="Judul anime" required />
+      <input
+        type="number"
+        id="animeRating"
+        placeholder="Rating (1-10)"
+        min="1"
+        max="10"
+        required
+      />
+      <input
+        type="text"
+        id="animeDesc"
+        placeholder="Deskripsi singkat"
+        required
+      />
+      <input
+        type="text"
+        id="animeImg"
+        placeholder="Link gambar (URL)"
+        required
+      />
+      <button type="submit">Tambah</button>
+    </form>
+
+    <input type="text" id="searchInput" placeholder="Cari anime..." />
+    <label for="ratingFilter">Filter rating minimal:</label>
+    <select id="ratingFilter">
+      <option value="0">Semua</option>
+      <option value="5">5+</option>
+      <option value="6">6+</option>
+      <option value="7">7+</option>
+      <option value="8">8+</option>
+      <option value="9">9+</option>
+    </select>
+
+    <ul id="animeList"></ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
